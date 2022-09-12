@@ -16,4 +16,5 @@ public class OderProduct {
     private  int quantity;
     private int price;
     private int priceAll;
+
 }

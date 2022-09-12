@@ -15,5 +15,6 @@ public class Product {
     private int price;
     private boolean status;
     private String description;
+    private int amount;
 
 }
