@@ -14,8 +14,8 @@ public class User {
     private long id;
     private String name;
     private String pass;
-    @ManyToOne
-    private Role role;
+//    @ManyToOne
+//    private Role role;
 
 
 }
