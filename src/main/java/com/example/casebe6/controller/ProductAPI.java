@@ -1,4 +1,4 @@
-package com.example.casebe6.controllers;
+package com.example.casebe6.controller;
 
 
 import com.example.casebe6.models.Product;
