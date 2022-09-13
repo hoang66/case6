@@ -1,5 +1,7 @@
-package com.example.casebe6.service;
+package com.example.casebe6.service.classALL;
 
+import com.example.casebe6.models.Seller;
+import com.example.casebe6.repository.ISellerRepo;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,5 +38,15 @@ public class JWTService {
                 .parseClaimsJws(token)
                 .getBody().getSubject();
         return userName;
+    }
+
+    @Service
+    public static class SellerService {
+        @Autowired
+        ISellerRepo iSellerRepo;
+
+        public Seller save(Seller seller) {
+            return iSellerRepo.save(seller);
+        }
     }
 }

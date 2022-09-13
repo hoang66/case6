@@ -1,4 +1,4 @@
-package com.example.casebe6.models.repository;
+package com.example.casebe6.repository;
 
 import com.example.casebe6.models.AppUser;
 import com.example.casebe6.models.Seller;

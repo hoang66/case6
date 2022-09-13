@@ -1,7 +1,7 @@
 package com.example.casebe6.config;
 
 import com.example.casebe6.config.fillter.JwtAuthenticationFilter;
-import com.example.casebe6.service.AppUserService;
+import com.example.casebe6.service.classALL.AppUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
