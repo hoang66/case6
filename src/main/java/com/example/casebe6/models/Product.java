@@ -9,10 +9,11 @@ import javax.persistence.*;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String nameSt;
     private String img;
     private int price;
+    private int quantity;
     private boolean status;
     private String description;
     private int amount;

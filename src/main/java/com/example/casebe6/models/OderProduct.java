@@ -15,7 +15,7 @@ public class OderProduct {
     private int price;
     private int priceAll;
     @ManyToOne
-    private User user;
+    private AppUser appUser;
     @ManyToMany
     private Set<Product> products;
 }
