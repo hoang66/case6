@@ -1,7 +1,7 @@
 package com.example.casebe6.service.classALL;
 
 import com.example.casebe6.models.OderProduct;
-import com.example.casebe6.models.repository.IOderProductRepo;
+import com.example.casebe6.repository.IOderProductRepo;
 import com.example.casebe6.service.interfaceALL.IOrderProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
