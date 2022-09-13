@@ -53,4 +53,5 @@ public class LoginAPI {
         sellerService.save(seller);
         return new ResponseEntity<>(seller.getAppUser(), HttpStatus.OK);
     }
+
 }
