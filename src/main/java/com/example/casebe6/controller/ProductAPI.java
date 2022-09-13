@@ -2,7 +2,8 @@ package com.example.casebe6.controller;
 
 
 import com.example.casebe6.models.Product;
-import com.example.casebe6.repository.IProductRepo;
+
+import com.example.casebe6.models.repository.IProductRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -2,19 +2,20 @@ package com.example.casebe6.models;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Data
 public class OderProduct {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
     private  int quantity;
     private int price;
     private int priceAll;
-
+    @ManyToOne
+    private AppUser appUser;
+    @ManyToMany
+    private Set<Product> products;
 }
