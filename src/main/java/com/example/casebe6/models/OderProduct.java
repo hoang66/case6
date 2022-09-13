@@ -10,7 +10,7 @@ import java.util.Set;
 public class OderProduct {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
     private  int quantity;
     private int price;
     private int priceAll;
