@@ -1,7 +1,7 @@
 package com.example.casebe6.service;
 
 import com.example.casebe6.models.AppUser;
-import com.example.casebe6.models.repository.IAppUserRepo;
+import com.example.casebe6.repository.IAppUserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;

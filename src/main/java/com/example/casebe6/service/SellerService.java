@@ -1,7 +1,7 @@
 package com.example.casebe6.service;
 
 import com.example.casebe6.models.Seller;
-import com.example.casebe6.models.repository.ISellerRepo;
+import com.example.casebe6.repository.ISellerRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
