@@ -6,7 +6,6 @@ import com.example.casebe6.models.Role;
 import com.example.casebe6.models.Seller;
 import com.example.casebe6.service.AppUserService;
 import com.example.casebe6.service.JWTService;
-import com.example.casebe6.service.SellerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,8 +31,6 @@ public class LoginAPI {
     @Autowired
     AppUserService appUserService;
 
-    @Autowired
-    SellerService sellerService;
 
     @PostMapping("/login")
     public UserToken login(@RequestBody AppUser appUser) {
@@ -53,12 +50,12 @@ public class LoginAPI {
         }
     }
 
-    @PostMapping("/registerSeller")
-    public ResponseEntity<AppUser> register(@RequestBody Seller seller) {
-        appUserService.save(seller.getAppUser());
-        sellerService.save(seller);
-        return new ResponseEntity<>(seller.getAppUser(), HttpStatus.OK);
-    }
+//    @PostMapping("/registerSeller")
+//    public ResponseEntity<AppUser> register(@RequestBody Seller seller) {
+//        appUserService.save(seller.getAppUser());
+//        sellerService.save(seller);
+//        return new ResponseEntity<>(seller.getAppUser(), HttpStatus.OK);
+//    }
 
     @PostMapping("/register")
     public ResponseEntity<AppUser> register(@RequestBody AppUser appUser) {
