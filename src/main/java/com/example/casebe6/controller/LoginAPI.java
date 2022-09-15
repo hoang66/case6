@@ -6,7 +6,6 @@ import com.example.casebe6.models.Role;
 import com.example.casebe6.models.Seller;
 import com.example.casebe6.service.classALL.AppUserService;
 import com.example.casebe6.service.classALL.JWTService;
-import com.example.casebe6.service.classALL.SellerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
