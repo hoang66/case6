@@ -34,10 +34,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().antMatchers("/home/**","/login","/registerSeller","/registerCustomer","/checkUserName","/**").permitAll()
+        http.authorizeRequests().antMatchers("/home/**","/login","/register","/registerSeller","/registerCustomer","/checkUserName","/**").permitAll()
                 .and().authorizeRequests().antMatchers("/customer/**").hasRole("CUSTOMER")
                 .and().authorizeRequests().antMatchers("/admin/**").hasRole("ADMIN")
-                .and().authorizeRequests().antMatchers("/sellers/**").hasRole("SELLER")
+//                .and().authorizeRequests().antMatchers("/sellers/**").hasRole("SELLER")
                 .anyRequest().authenticated()
                 .and().csrf().disable();
 
@@ -47,7 +47,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.cors().configurationSource(request -> new CorsConfiguration().applyPermitDefaultValues());
     }
 
-    // xắc thực
+    // xác thực
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(appUserService).passwordEncoder(NoOpPasswordEncoder.getInstance());
