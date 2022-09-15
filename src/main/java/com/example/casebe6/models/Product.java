@@ -18,6 +18,9 @@ public class Product {
     private String description;
     private int amount;
 
+    @ManyToOne
+    private Catagorie catagorie;
+
 }
 
 

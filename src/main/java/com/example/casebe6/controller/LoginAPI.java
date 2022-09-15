@@ -3,9 +3,9 @@ package com.example.casebe6.controller;
 import com.example.casebe6.dto.UserToken;
 import com.example.casebe6.models.AppUser;
 import com.example.casebe6.models.Seller;
-import com.example.casebe6.service.AppUserService;
-import com.example.casebe6.service.JWTService;
-import com.example.casebe6.service.SellerService;
+import com.example.casebe6.service.classALL.AppUserService;
+import com.example.casebe6.service.classALL.JWTService;
+import com.example.casebe6.service.classALL.SellerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -53,4 +53,5 @@ public class LoginAPI {
         sellerService.save(seller);
         return new ResponseEntity<>(seller.getAppUser(), HttpStatus.OK);
     }
+
 }

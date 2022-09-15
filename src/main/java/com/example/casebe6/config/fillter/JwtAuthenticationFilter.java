@@ -1,7 +1,7 @@
 package com.example.casebe6.config.fillter;
 
-import com.example.casebe6.service.AppUserService;
-import com.example.casebe6.service.JWTService;
+import com.example.casebe6.service.classALL.AppUserService;
+import com.example.casebe6.service.classALL.JWTService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -28,7 +28,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         try {
             String token = getTokenFromRequest(request);
-            if (!token.equals("null")) {
+            if (token!=null) {
                 // lấy username trong token
                 String username = jwtService.getUserNameFromJwtToken(token);
                 // lấy ra UserDetails thông qua username
