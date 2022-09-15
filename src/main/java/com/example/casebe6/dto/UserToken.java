@@ -6,16 +6,16 @@ import java.util.Set;
 
 public class UserToken {
     private long id;
-    private String name;
+    private String username;
     private String token;
     private Set<Role> roles;
 
     public UserToken() {
     }
 
-    public UserToken(long id, String name, String token, Set<Role> roles) {
+    public UserToken(long id, String username, String token, Set<Role> roles) {
         this.id = id;
-        this.name = name;
+        this.username = username;
         this.token = token;
         this.roles = roles;
     }
@@ -28,12 +28,12 @@ public class UserToken {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getToken() {
