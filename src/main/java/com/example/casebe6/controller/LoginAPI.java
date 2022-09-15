@@ -3,7 +3,6 @@ package com.example.casebe6.controller;
 import com.example.casebe6.dto.UserToken;
 import com.example.casebe6.models.AppUser;
 import com.example.casebe6.models.Role;
-import com.example.casebe6.models.Seller;
 import com.example.casebe6.service.classALL.AppUserService;
 import com.example.casebe6.service.classALL.JWTService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,9 +30,6 @@ public class LoginAPI {
     @Autowired
     AppUserService appUserService;
 
-    @Autowired
-    SellerService sellerService;
-
     @PostMapping("/login")
     public UserToken login(@RequestBody AppUser appUser) {
         try {
@@ -52,12 +48,6 @@ public class LoginAPI {
         }
     }
 
-    @PostMapping("/registerSeller")
-    public ResponseEntity<AppUser> register(@RequestBody Seller seller) {
-        appUserService.save(seller.getAppUser());
-        sellerService.save(seller);
-        return new ResponseEntity<>(seller.getAppUser(), HttpStatus.OK);
-    }
 
     @PostMapping("/register")
     public ResponseEntity<AppUser> register(@RequestBody AppUser appUser) {
