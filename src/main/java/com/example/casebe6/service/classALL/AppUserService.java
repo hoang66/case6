@@ -1,4 +1,4 @@
-package com.example.casebe6.service;
+package com.example.casebe6.service.classALL;
 
 import com.example.casebe6.models.AppUser;
 import com.example.casebe6.repository.IAppUserRepo;

@@ -1,7 +1,7 @@
 package com.example.casebe6.config;
 
 import com.example.casebe6.config.fillter.JwtAuthenticationFilter;
-import com.example.casebe6.service.AppUserService;
+import com.example.casebe6.service.classALL.AppUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -34,11 +34,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().antMatchers("/home/**","/login","/register","/registerSeller","/registerCustomer","/checkUserName","/**").permitAll()
-                .and().authorizeRequests().antMatchers("/customer/**").hasRole("CUSTOMER")
-                .and().authorizeRequests().antMatchers("/admin/**").hasRole("ADMIN")
-                .and().authorizeRequests().antMatchers("/sellers/**").hasRole("SELLER")
-                .anyRequest().authenticated()
+        http.authorizeRequests().antMatchers("/home/**","/login","/registerSeller","/registerCustomer","/checkUserName","/products/**","**").permitAll()
+//                .and().authorizeRequests().antMatchers("/customer/**").hasRole("CUSTOMER")
+//                .and().authorizeRequests().antMatchers("/admin/**").hasRole("ADMIN")
+//                .and().authorizeRequests().antMatchers("/sellers/**").hasRole("SELLER")
+//                .anyRequest().authenticated()
                 .and().csrf().disable();
 
 
@@ -47,7 +47,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.cors().configurationSource(request -> new CorsConfiguration().applyPermitDefaultValues());
     }
 
-    // xác thực
+    // xắc thực
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(appUserService).passwordEncoder(NoOpPasswordEncoder.getInstance());
