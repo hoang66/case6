@@ -22,7 +22,7 @@ public class ProductService implements IProductService {
         return iProductRepo.save(product);
     }
 
-    public void deleteProduct(Long id) {
+    public void delete(Long id) {
         iProductRepo.deleteById(id);
     }
 
@@ -30,7 +30,4 @@ public class ProductService implements IProductService {
         return iProductRepo.findById(id);
     }
 
-    public Iterable<Product> findByName(String name){
-        return iProductRepo.findAllByNameContaining(name);
-    }
 }

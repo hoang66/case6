@@ -31,8 +31,7 @@ public class LoginAPI {
     @Autowired
     AppUserService appUserService;
 
-    @Autowired
-    SellerService sellerService;
+
 
     @PostMapping("/login")
     public UserToken login(@RequestBody AppUser appUser) {
@@ -52,12 +51,12 @@ public class LoginAPI {
         }
     }
 
-    @PostMapping("/registerSeller")
-    public ResponseEntity<AppUser> register(@RequestBody Seller seller) {
-        appUserService.save(seller.getAppUser());
-        sellerService.save(seller);
-        return new ResponseEntity<>(seller.getAppUser(), HttpStatus.OK);
-    }
+//    @PostMapping("/registerSeller")
+//    public ResponseEntity<AppUser> register(@RequestBody Seller seller) {
+//        appUserService.save(seller.getAppUser());
+//        sellerService.save(seller);
+//        return new ResponseEntity<>(seller.getAppUser(), HttpStatus.OK);
+//    }
 
     @PostMapping("/register")
     public ResponseEntity<AppUser> register(@RequestBody AppUser appUser) {
