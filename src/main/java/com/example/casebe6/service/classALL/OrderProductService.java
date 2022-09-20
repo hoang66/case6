@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service
 public class OrderProductService implements IOrderProductService {
     @Autowired
@@ -16,4 +17,13 @@ public class OrderProductService implements IOrderProductService {
     public List<OderProduct> findAllProductByIdUser(int id) {
         return (List<OderProduct>) iOderProductRepo.findAllProductByIdUser(id);
     }
+
+    public OderProduct save(OderProduct oderProduct) {
+        return iOderProductRepo.save(oderProduct);
+    }
+
+    public List<OderProduct> findAll() {
+        return (List<OderProduct>) iOderProductRepo.findAll();
+    }
 }
+
